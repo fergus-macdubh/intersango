@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns:b="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:s="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd">
+
+       <s:authentication-manager>
+              <s:authentication-provider ref="adAuthenticationProvider"/>
+       </s:authentication-manager>
+
+       <b:bean id="adAuthenticationProvider"
+               class="org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider">
+              <b:constructor-arg value="${ldap.domain}"/>
+              <b:constructor-arg value="${ldap.url}"/>
+              <b:property name="userDetailsContextMapper" ref="userDetailsMapper"/>
+       </b:bean>
+</b:beans>

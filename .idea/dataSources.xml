@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3189167575">
+  <component name="DataSourceManagerImpl" format="xml">
     <data-source source="LOCAL" name="HSQLDB - ." uuid="66b9ee2a-0cdf-460c-bd17-2d4e19d1977d">
       <driver-ref>hsqldb.in-memory</driver-ref>
       <synchronize>true</synchronize>
