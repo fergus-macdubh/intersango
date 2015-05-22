@@ -1,0 +1,15 @@
+<html>
+<head>
+    <style type="text/css">
+        #include("/velocity/style.css")
+    </style>
+</head>
+<body>
+
+<p>Dear user,</p>
+<p>Unfortunatelly, order <a href="#">#$order.id</a> is cancelled by owner.</p>
+
+<p>Best regards,<br/>Intersango Team</p>
+
+</body>
+</html>

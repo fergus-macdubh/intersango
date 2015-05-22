@@ -1,0 +1,41 @@
+<b:beans
+        xmlns:b="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:s="http://www.springframework.org/schema/security" xmlns:ldap="http://www.springframework.org/schema/ldap"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-4.0.xsd http://www.springframework.org/schema/ldap http://www.springframework.org/schema/ldap/spring-ldap.xsd">
+
+    <s:http auto-config="true">
+        <s:intercept-url pattern="/**" access="isAuthenticated()"/>
+        <s:csrf disabled="true"/>
+    </s:http>
+
+    <s:authentication-manager>
+        <!-- ====================================================================== -->
+        <!-- DEVELOPMENT ONLY -->
+        <!-- ====================================================================== -->
+        <!--<s:authentication-provider>
+            <s:user-service>
+                <s:user name="admin" password="admin" authorities="ROLE_USER" />
+                <s:user name="user" password="user" authorities="ROLE_USER"/>
+            </s:user-service>
+        </s:authentication-provider>-->
+
+        <s:authentication-provider ref="adAuthenticationProvider"/>
+    </s:authentication-manager>
+
+    <!-- ====================================================================== -->
+    <!-- LDAP -->
+    <!-- ====================================================================== -->
+    <!--<s:ldap-server url="LDAP://db-dc6.dbdc.luxoft.com:389/dc=dbdc"/>-->
+
+    <b:bean id="adAuthenticationProvider"
+            class="org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider">
+        <b:constructor-arg value="dbdc.luxoft.com"/>
+        <b:constructor-arg value="ldap://db-dc4.dbdc.luxoft.com/"/>
+        <b:property name="userDetailsContextMapper" ref="userDetailsMapper"/>
+    </b:bean>
+
+</b:beans>

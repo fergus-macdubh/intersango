@@ -1,0 +1,26 @@
+<table>
+    <tr>
+        <th>First Name</th>
+        <td>$user.firstName</td>
+    </tr>
+    <tr>
+        <th>Last Name</th>
+        <td>$user.lastName</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>$user.email</td>
+    </tr>
+    <tr>
+        <th>Mobile</th>
+        <td>$user.mobile</td>
+    </tr>
+    <tr>
+        <th>Location</th>
+        <td>$user.location</td>
+    </tr>
+    <tr>
+        <th>Office</th>
+        <td>$user.office</td>
+    </tr>
+</table>
