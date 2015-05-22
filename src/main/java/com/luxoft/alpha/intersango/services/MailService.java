@@ -27,7 +27,7 @@ public class MailService {
     @Value("${mail.subject.prefix}")
     private String prefix;
 
-    @Value("{mail.from}")
+    @Value("${mail.from}")
     private String from;
 
     public void sendMail(String to, String subject, String template, Map map) {

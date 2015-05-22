@@ -28,6 +28,8 @@
         </profile>
     </profiles>
 
+
+
     <properties>
         <spring.version>4.1.6.RELEASE</spring.version>
         <spring.security.version>4.0.1.RELEASE</spring.security.version>
@@ -35,6 +37,17 @@
     </properties>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+        <filters>
+            <filter>src/main/filters/${env}.properties</filter>
+        </filters>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
