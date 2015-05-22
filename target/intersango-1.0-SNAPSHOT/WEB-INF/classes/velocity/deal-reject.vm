@@ -1,0 +1,14 @@
+<html>
+<head>
+    <style type="text/css">
+        #include("/velocity/style.css")
+    </style>
+</head>
+<body>
+
+<p>Dear user,</p>
+<p>Unfortunatelly, deal <a href="#">#$deal.id</a> is rejected by order owner.</p>
+<p>Best regards,<br/>Intersango Team</p>
+
+</body>
+</html>

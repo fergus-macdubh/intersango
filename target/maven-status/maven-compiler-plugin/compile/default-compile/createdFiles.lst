@@ -1,0 +1,16 @@
+com\luxoft\alpha\intersango\domain\Order.class
+com\luxoft\alpha\intersango\domain\OrderState.class
+com\luxoft\alpha\intersango\dao\UserDAO.class
+com\luxoft\alpha\intersango\domain\Currency.class
+com\luxoft\alpha\intersango\controllers\ControllerUtils.class
+com\luxoft\alpha\intersango\domain\User.class
+com\luxoft\alpha\intersango\filters\AuthFilter.class
+com\luxoft\alpha\intersango\controllers\DealController.class
+com\luxoft\alpha\intersango\dao\DealDAO.class
+com\luxoft\alpha\intersango\domain\DealState.class
+com\luxoft\alpha\intersango\controllers\OrderController.class
+com\luxoft\alpha\intersango\domain\OrderType.class
+com\luxoft\alpha\intersango\dao\OrderDAO.class
+com\luxoft\alpha\intersango\domain\Deal.class
+com\luxoft\alpha\intersango\services\MailService.class
+com\luxoft\alpha\intersango\domain\Role.class

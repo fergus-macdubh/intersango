@@ -1,0 +1,39 @@
+body {
+    margin: 0 auto;
+    width: 800px;
+    padding: 0;
+    font-size: 12px;
+    font-family: verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    background-color: #29313C;
+}
+
+table {
+    border: solid aliceblue 1px;
+    width: 100%;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: solid aliceblue 1px;
+}
+
+tr.bid {
+    background-color: darkcyan;
+}
+
+tr.ask {
+    background-color: brown;
+}
+
+a {
+    color: aquamarine;
+}
+
+form table {
+    border: 0;
+}
+
+form table td {
+    vertical-align: top;
+}

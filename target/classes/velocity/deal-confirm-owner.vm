@@ -1,0 +1,19 @@
+<html>
+<head>
+    <style type="text/css">
+        #include("/velocity/style.css")
+    </style>
+</head>
+<body>
+
+<p>Dear user,</p>
+<p>You have confirmed the deal <a href="#">#$deal.id</a> from user $deal.acceptor.username.
+    Please, contact acceptor now.</p>
+<h3>Acceptor user info:</h3>
+    #set( $user = $deal.acceptor )
+    #parse("/velocity/user-details-table.vm")
+
+<p>Best regards,<br/>Intersango Team</p>
+
+</body>
+</html>
