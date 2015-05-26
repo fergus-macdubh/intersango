@@ -41,15 +41,15 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/order/add/", method = RequestMethod.POST)
-    public String addOrder(@RequestParam OrderType type,
+    public ModelAndView addOrder(@RequestParam OrderType type,
                            @RequestParam Currency currency,
                            @RequestParam Integer amount,
                            @RequestParam Double price) {
-        if (amount <= 0)
-            utils.generateError("Amount must be greater than zero.");
+        if (amount == null || amount <= 0)
+            return utils.generateError("Amount must be greater than zero.");
 
-        if (price <= 0)
-            utils.generateError("Price must be greater than zero.");
+        if (price == null || price <= 0)
+            return utils.generateError("Price must be greater than zero.");
 
         Order order = new Order();
         order.setType(type);
@@ -59,7 +59,7 @@ public class OrderController {
         order.setUser(utils.getCurrentUser());
         orderRepository.save(order);
 
-        return "redirect:/";
+        return new ModelAndView("redirect:/");
     }
 
     @RequestMapping(value = "/order/{id}", method = RequestMethod.GET)
