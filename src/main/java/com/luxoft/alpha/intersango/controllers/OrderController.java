@@ -45,6 +45,12 @@ public class OrderController {
                            @RequestParam Currency currency,
                            @RequestParam Integer amount,
                            @RequestParam Double price) {
+        if (amount <= 0)
+            utils.generateError("Amount must be greater than zero.");
+
+        if (price <= 0)
+            utils.generateError("Price must be greater than zero.");
+
         Order order = new Order();
         order.setType(type);
         order.setCurrency(currency);

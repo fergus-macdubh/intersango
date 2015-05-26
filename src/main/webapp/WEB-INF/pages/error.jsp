@@ -3,5 +3,6 @@
 
 <h2>Error</h2>
 <h3>${message}</h3>
+<p><a href="javascript:window.history.back()"></a></p>
 
 <jsp:include page="footer.jsp"/>
