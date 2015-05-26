@@ -4,9 +4,7 @@ import com.luxoft.alpha.intersango.domain.*;
 import com.luxoft.alpha.intersango.repository.DealRepository;
 import com.luxoft.alpha.intersango.repository.OrderRepository;
 import com.luxoft.alpha.intersango.services.MailService;
-import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -60,7 +58,7 @@ public class OrderController {
 
     @RequestMapping(value = "/order/{id}", method = RequestMethod.GET)
     public ModelAndView orderDetails(@PathVariable Long id) {
-        ModelAndView model = new ModelAndView("details");
+        ModelAndView model = new ModelAndView("order");
 
         Order order = orderRepository.findOne(id);
 

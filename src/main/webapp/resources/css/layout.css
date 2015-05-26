@@ -8,6 +8,20 @@ body {
     background-color: #29313C;
 }
 
+div#header {
+    width: 800px;
+}
+
+div#left_column {
+    float: left;
+    width: 200px;
+}
+
+div#content {
+    float: left;
+    width: 600px;
+}
+
 table {
     border: solid aliceblue 1px;
     width: 100%;

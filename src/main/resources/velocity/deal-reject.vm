@@ -7,7 +7,7 @@
 <body>
 
 <p>Dear user,</p>
-<p>Unfortunatelly, deal <a href="#">#$deal.id</a> is rejected by order owner.</p>
+<p>Unfortunatelly, deal for order <a href="$url/order/$deal.order.id">#$deal.order.id</a> is rejected by order owner.</p>
 <p>Best regards,<br/>Intersango Team</p>
 
 </body>

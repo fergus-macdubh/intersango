@@ -7,7 +7,7 @@
 <body>
 
 <p>Dear user,</p>
-<p>Deal <a href="#">#$deal.id</a> is confirmed by order owner - user $deal.order.user.
+<p>Deal <a href="$url/deal/$deal.id">#$deal.id</a> is confirmed by order owner - user $deal.order.user.
     Please, contact owner now.</p>
 <h3>Owner user info:</h3>
     #set( $user = $deal.order.user )

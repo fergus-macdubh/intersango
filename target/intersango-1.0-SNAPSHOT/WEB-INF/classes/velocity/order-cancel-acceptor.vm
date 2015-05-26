@@ -7,7 +7,7 @@
 <body>
 
 <p>Dear user,</p>
-<p>Unfortunatelly, order <a href="#">#$order.id</a> is cancelled by owner.</p>
+<p>Unfortunatelly, order <a href="$url/order/$order.id">#$order.id</a> is cancelled by owner.</p>
 
 <p>Best regards,<br/>Intersango Team</p>
 

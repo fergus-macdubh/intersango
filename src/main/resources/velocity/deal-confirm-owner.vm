@@ -7,7 +7,7 @@
 <body>
 
 <p>Dear user,</p>
-<p>You have confirmed the deal <a href="#">#$deal.id</a> from user $deal.acceptor.username.
+<p>You have confirmed a deal for your order <a href="$url/order/$deal.order.id">#$deal.order.id</a> from user $deal.acceptor.username.
     Please, contact acceptor now.</p>
 <h3>Acceptor user info:</h3>
     #set( $user = $deal.acceptor )

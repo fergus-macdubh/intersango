@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationContext;
 import org.springframework.mail.MailSendException;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -12,6 +13,9 @@ import org.springframework.ui.velocity.VelocityEngineUtils;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.ServletContext;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Map;
 
 @Component
@@ -30,7 +34,10 @@ public class MailService {
     @Value("${mail.from}")
     private String from;
 
-    public void sendMail(String to, String subject, String template, Map map) {
+    @Value("${mail.url}")
+    private String url;
+
+    public void sendMail(String to, String subject, String template, Map<String, Object> map) {
         sendMail(from,
                 new String[]{to},
                 null,
@@ -41,7 +48,9 @@ public class MailService {
     }
 
     public void sendMail(String from, String[] to, String[] copyTo, String[] blindCopyTo,
-                         String subject, String templateLocation, Map model) {
+                         String subject, String templateLocation, Map<String, Object> model) {
+        model.put("url", url);
+
         final String text = VelocityEngineUtils.mergeTemplateIntoString(velocityEngine, templateLocation, model);
 
         final MimeMessage message = mailSender.createMimeMessage();

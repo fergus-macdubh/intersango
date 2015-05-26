@@ -7,9 +7,9 @@
 <body>
 
 <p>Dear user,</p>
-<p>Your order <a href="#">#$deal.order.id</a> is accepted by user $deal.acceptor.email.
-    You can either <a href="/deal/$deal.id/confirm/">confirm</a>
-    or <a href="/deal/$deal.id/reject/">reject</a> this deal.</p>
+<p>Your order <a href="$url/deal/$deal.id">#$deal.order.id</a> is accepted by user $deal.acceptor.email.
+    You can either <a href="$url/deal/$deal.id/confirm/">confirm</a>
+    or <a href="$url/deal/$deal.id/reject/">reject</a> this deal.</p>
 <p>Best regards,<br/>Intersango Team</p>
 
 </body>
